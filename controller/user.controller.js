@@ -16,14 +16,8 @@ module.exports.getuser = (req,res) => {
 
 module.exports.register=(req,res)=> {
 let response={};
-    let users = new user(req.body);
-    var User=new user(users);
-    // var User= new user({
-    //     username:req.body.username,
-    //     email:req.body.email,
-    //     city:req.body.city
-    // });
-
+    //let users = new user(req.body);
+    var User=new user(req.body);
     User.save((err,doc)=>{
         if(!err)
         {
