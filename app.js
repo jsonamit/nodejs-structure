@@ -1,18 +1,20 @@
 const express=require('express');
+const http=require('http');
 const app=express();
-const bodyParser=require('body-parser');
-const cors=require('cors');
 const conn = require('./dbconnection/db');
 const route = require('./routes/index');
+const config =require('./config/express')
 
-app.use(bodyParser.json());
-app.use(cors());
+config(app);
 
 const PORT = process.env.PORT || 3000;
-app.listen(PORT, () => {
+const server=http.createServer(app);
+server.listen(PORT,()=>{
     console.log(`server up and running on port ${PORT}`)
 });
+// app.listen(PORT, () => {
+//     console.log(`server up and running on port ${PORT}`)
+// });
 
-app.use('/',route);
 
 

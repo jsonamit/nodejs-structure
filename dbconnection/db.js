@@ -10,4 +10,4 @@ mongoose.connect('mongodb://localhost:27017/MEANstackDB',(err)=>{
     }
 });
 
-require('../models/user.model');
+require('../models/userModel/user.model');
