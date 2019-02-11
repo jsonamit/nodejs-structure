@@ -26,15 +26,7 @@ module.exports.getuser = (req,res) => {
         response.data= error;
         res.send(response);
     }
-    // user.find((err,doc)=>{
-    //     if(!err)
-    //     {
-    //         res.send('this is user route');
-    //     }
-    //     else {
-    //         console.log('error with connection db'+JSON.stringify(err));
-    //     }
-    // });
+
 }
 module.exports.getuserById = (req,res) => {
     res.send('getting user by id');
