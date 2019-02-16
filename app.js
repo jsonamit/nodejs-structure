@@ -1,7 +1,7 @@
 const express=require('express');
 const http=require('http');
 const app=express();
-const conn = require('./dbconnection/db');
+const conn = require('./conn/conn');
 const route = require('./routes/index');
 const config =require('./config/express')
 
