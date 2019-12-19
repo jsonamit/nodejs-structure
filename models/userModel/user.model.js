@@ -6,7 +6,10 @@ const userSchema = new Schema({
     },
     email: {
         type: String,
-    }
+    },
+    product: {
+        type: String,
+    },
 });
 
 const users=mongoose.model('users',userSchema);
